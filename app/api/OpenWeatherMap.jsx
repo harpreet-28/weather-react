@@ -1,3 +1,4 @@
+
 var axios = require('axios');
 const APIKey = '666895941742aa85eaa793a69b43acbd';
 
@@ -18,11 +19,12 @@ module.exports = {
                   return res.data.main.temp;
                 }
               }, function (rej) {
-                throw new Error(rej.data.message);
+                // debugger;
+                // throw new Error(rej.response.data.message);
+                throw new Error('Unable to fetch weather for that Location Provided!')
               });
 
   }
 }
-
 
 // in Browser some characters can convert into Other Characters
