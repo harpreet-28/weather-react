@@ -17,7 +17,7 @@ var Examples = require('Examples');
 const _ById = (id) => document.getElementById(id);
 
 var obj = {
-  name: 'Dixit Patel'
+  name: 'Harpreet Kaur'
 };
 
 var {name} = obj;
