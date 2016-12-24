@@ -14,11 +14,19 @@ var Main = React.createClass({
 });
 */
 var Main = React.createClass({
+
   render: function () {
+    const marginTop = {
+      marginTop: "1rem"
+    };
+    const bordeStyle = {
+      border: "2px solid #466d98"
+    };
     return (
       <div>
         <Nav/>
-        <div className="row">
+        <div style={marginTop}></div>
+        <div className="row" style={bordeStyle}>
           <div className="medium-6 large-4 small-centered columns">
             {this.props.children}
           </div>
