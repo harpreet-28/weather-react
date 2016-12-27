@@ -3,6 +3,7 @@ var WeatherForm = require('WeatherForm');
 var WeatherMessage = require('WeatherMessage');
 var OpenWeatherMap = require('OpenWeatherMap');
 var ErrorModal = require('ErrorModal');
+var CheckBox = require('CheckBox')
 
 var Weather = React.createClass({
   getInitialState: function () {
@@ -89,6 +90,7 @@ var Weather = React.createClass({
     return (
       <div>
         <h1 className="text-center page-title">Fetch Weather </h1>
+        <CheckBox text={36} value="selectOne" name="Select-One" checked={false} />
         <WeatherForm onSearch={this.handleSearch} />
         {renderMessage()}
         {renderError()}

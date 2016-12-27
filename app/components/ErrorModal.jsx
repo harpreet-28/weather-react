@@ -1,15 +1,11 @@
 var React = require('react');
 
-const { PropTypes } = React;
-
-const { string, number } = PropTypes;
-
 var ErrorModal = React.createClass({
   propTypes: {
-    title: PropTypes.oneOfType([ string, number]),
-    message: string.isRequired
+    title: React.PropTypes.string,
+    message: React.PropTypes.string.isRequired
   },
-  getDefaultProps: function () {
+  getDefalutProps: function () {
     return  {
       title: 'Error Details'
     };
@@ -25,7 +21,7 @@ var ErrorModal = React.createClass({
         <h4>{title}</h4>
         <p>{message}</p>
         <p>
-          <button className="button hollow" data-close="">OK</button>
+          <button className="button hollow" data-clos="">OK</button>
         </p>
       </div>
     )
